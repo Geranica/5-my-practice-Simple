@@ -1,0 +1,128 @@
+@import "_null.scss";
+body {
+   font-family: 'Roboto', sans-serif; 
+}
+
+._container {
+   margin: 0 auto;
+   width: 100%;
+   padding: 0px 15px;
+   max-width: 1140px;
+}
+@media (max-width: 1140px) { 
+   /*стили применятся в случае, если ширина экрана будет меньше 1183px, то есть когда ширина экрана будет не превышать 1182px  */
+   /* Начиная с этой ширины экрана (1182px) и меньше начинаю применяться прописанные стили */
+   ._container {
+      max-width: 970px;
+   }
+}
+@media (max-width: 992px) {
+   ._container {
+      max-width: 750px;
+   }
+}
+@media (max-width: 767px) {
+   ._container {
+      max-width: none;
+   }
+}
+
+.header {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   right: 0;
+   z-index: 50;
+   border-bottom: 1px solid #DDDDDD;
+   
+
+   // .header__container
+
+   &__container {
+      display: flex;
+      align-items: center;
+      min-height: 79px;
+   }
+
+   // .header__logo
+
+   &__logo {
+   }
+
+   // .header__menu
+
+   &__menu {
+   }
+
+   // .header__list
+
+   &__list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px 60px;
+   }
+
+   // .header__item
+
+   &__item {
+      display: flex;
+      gap: 0px 30px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: normal;
+   }
+
+   // .header__link
+
+   &__link {
+      color: #4C5866;
+   }
+}
+
+.logo {
+   display: flex;
+   align-items: center;
+   column-gap: 5px;
+   margin-right: 296px;
+   @media (max-width:1145) {
+      margin-right: 180px;
+   }
+
+   // .logo__part-one
+
+   &__part-one {
+      width: 17px;
+      height: 17px;
+      border: 1px solid #333;
+      border-radius: 100%;
+   }
+
+   // .logo__part-two
+
+   &__part-two {
+      font-family: 'Ubuntu', sans-serif;
+      color: #333;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: normal;
+   }
+
+   // .logo__part-three
+
+   &__part-three {
+      width: 32px;
+      height: 17px;
+      border: 1px solid #333;
+      border-radius: 11px;
+   }
+
+   // .logo__part-four
+
+   &__part-four {
+      width: 17px;
+      height: 17px;
+      border: 1px solid #333;
+      border-radius: 100%;
+   }
+}

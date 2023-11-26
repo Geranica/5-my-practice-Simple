@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+._container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px 15px;
+  max-width: 1140px;
+}
+
+@media (max-width: 1140px) {
+  /*стили применятся в случае, если ширина экрана будет меньше 1183px, то есть когда ширина экрана будет не превышать 1182px  */
+  /* Начиная с этой ширины экрана (1182px) и меньше начинаю применяться прописанные стили */
+  ._container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  ._container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  ._container {
+    max-width: none;
+  }
+}
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  border-bottom: 1px solid #DDDDDD;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 79px;
+}
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px 60px;
+}
+.header__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0px 30px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+.header__link {
+  color: #4C5866;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+  margin-right: 296px;
+}
+@media (max-width: 1145) {
+  .logo {
+    margin-right: 180px;
+  }
+}
+.logo__part-one {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #333;
+  border-radius: 100%;
+}
+.logo__part-two {
+  font-family: "Ubuntu", sans-serif;
+  color: #333;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: normal;
+}
+.logo__part-three {
+  width: 32px;
+  height: 17px;
+  border: 1px solid #333;
+  border-radius: 11px;
+}
+.logo__part-four {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #333;
+  border-radius: 100%;
+}
