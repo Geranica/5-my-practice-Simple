@@ -97,23 +97,22 @@ body {
   max-width: 1140px;
 }
 
-@media (max-width: 1140px) {
-  /*стили применятся в случае, если ширина экрана будет меньше 1183px, то есть когда ширина экрана будет не превышать 1182px  */
-  /* Начиная с этой ширины экрана (1182px) и меньше начинаю применяться прописанные стили */
-  ._container {
-    max-width: 970px;
-  }
+/* @media (max-width: 1140px) { 
+   ._container {
+      max-width: 970px;
+   }
 }
 @media (max-width: 992px) {
-  ._container {
-    max-width: 750px;
-  }
+   ._container {
+      max-width: 750px;
+   }
 }
 @media (max-width: 767px) {
-  ._container {
-    max-width: none;
-  }
+   ._container {
+      max-width: none;
+   }
 }
+ */
 .header {
   position: absolute;
   width: 100%;
@@ -121,6 +120,7 @@ body {
   right: 0;
   z-index: 50;
   border-bottom: 1px solid #DDDDDD;
+  padding: 10px 0px;
 }
 .header__container {
   display: -webkit-box;
@@ -365,7 +365,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0px 30px;
+  gap: 20px 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .whiteness__items:not(:last-child) {
   margin-bottom: 90px;
@@ -383,15 +385,34 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.whiteness__image {
-  padding-bottom: 33.714%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 45.7142857%;
-          flex: 0 1 45.7142857%;
+@media (max-width: 545px) {
+  .whiteness__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
 }
-.whiteness__image img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.whiteness__image {
+  height: 118px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 160px;
+          flex: 0 1 160px;
+}
+@media (max-width: 565px) {
+  .whiteness__image {
+    height: 111px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 150px;
+            flex: 0 1 150px;
+  }
+}
+@media (max-width: 378px) {
+  .whiteness__image {
+    height: 96px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 130px;
+            flex: 0 1 130px;
+  }
 }
 .whiteness__content {
   padding-top: 18px;
@@ -409,6 +430,13 @@ body {
   color: #85859B;
   font-weight: 400;
   line-height: 150%; /* 27px */
+  color: #85859B;
+  font-size: 18px;
+}
+@media (max-width: 520px) {
+  .whiteness__text {
+    font-size: 16px;
+  }
 }
 .whiteness__body {
   display: -webkit-box;
@@ -463,4 +491,97 @@ body {
 }
 .whiteness__additional-text p:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.page__goods {
+  min-height: 645px;
+}
+
+.goods__container {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.goods__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.goods__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(25% - 22.5px);
+          flex: 0 1 calc(25% - 22.5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 1030px) {
+  .goods__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(50% - 15px);
+            flex: 0 1 calc(50% - 15px);
+  }
+}
+.goods__image {
+  background-color: #EBEBEB;
+  padding: 0px 0px 70.588% 0px;
+}
+.goods__image:not(:last-child) {
+  margin-bottom: 20px;
+}
+.goods__image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.goods__title {
+  color: #666;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+}
+.goods__title:not(:last-child) {
+  margin-bottom: 8px;
+}
+.goods__subtitle {
+  color: #B5B5BD;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.goods__subtitle:not(:last-child) {
+  margin-bottom: 8px;
+}
+.goods__text {
+  color: #85859B;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+.goods__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+.goods__link {
+  color: #7875FE;
+  font-size: 20px;
+  font-weight: 400;
+}
+.goods__link::after {
+  content: "";
+  background: url("../img/page/goods/Arrow 1.svg") no-repeat;
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+  margin-left: 5px;
+  background-size: contain;
 }

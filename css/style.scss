@@ -20,9 +20,7 @@ body {
    padding: 0px 15px;
    max-width: 1140px;
 }
-@media (max-width: 1140px) { 
-   /*стили применятся в случае, если ширина экрана будет меньше 1183px, то есть когда ширина экрана будет не превышать 1182px  */
-   /* Начиная с этой ширины экрана (1182px) и меньше начинаю применяться прописанные стили */
+/* @media (max-width: 1140px) { 
    ._container {
       max-width: 970px;
    }
@@ -37,7 +35,7 @@ body {
       max-width: none;
    }
 }
-
+ */
 .header {
    position: absolute;
    width: 100%;
@@ -45,6 +43,7 @@ body {
    right: 0;
    z-index: 50;
    border-bottom: 1px solid #DDDDDD;
+   padding: 10px 0px;
    
 
    // .header__container
@@ -295,10 +294,11 @@ body {
 
    &__items {
       display: flex;
-      gap: 0px 30px;
+      gap: 20px 30px;
       &:not(:last-child) {
          margin-bottom: 90px;
       }
+      flex-wrap: wrap;
    }
 
    // .whiteness__item
@@ -310,17 +310,24 @@ body {
       flex: 0 1 calc(100% / 3 - (((3 - 1) / 3) * 30px));
       gap: 0px 30px;
       flex-wrap: wrap;
+      @media (max-width:545px) {
+         flex: 0 1 100%;
+      }
    }
 
    // .whiteness__image
 
    &__image {
-      padding-bottom: 33.714%;
-      flex: 0 1 45.7142857%;
-   img {
-      object-fit: cover;
-   }
-   
+      height: 118px;
+      flex: 0 1 160px;
+      @media (max-width: 565px) {
+         height: 111px;
+         flex: 0 1 150px;
+      }
+      @media (max-width: 378px) {
+         height: 96px;
+         flex: 0 1 130px;
+      }
    }
 
    // .whiteness__content
@@ -345,6 +352,11 @@ body {
       color: #85859B;
       font-weight: 400;
       line-height: 150%; /* 27px */
+      color: #85859B;
+      font-size: 18px;
+      @media (max-width: 520px) {
+         font-size: 16px;
+      }
    }
 
    // .whiteness__body
@@ -404,6 +416,116 @@ body {
       }
    }
 }
+
+
+//GOODS========================================
+.page {
+
+   // .page__goods
+
+   &__goods {
+      min-height: 645px;
+   }
+}
+.goods {
+
+   // .goods__container
+
+   &__container {
+      padding-top: 90px;
+      padding-bottom: 90px;
+   }
+
+   // .goods__body
+
+   &__body {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+   }
+
+   // .goods__item
+
+   &__item {
+      flex: 0 1 calc(100% / 4 - (((4 - 1) / 4) * 30px));
+      display: flex;
+      flex-direction: column;
+      @media (max-width:1030px) {
+         flex: 0 1 calc(100% / 2 - (((2 - 1) / 2) * 30px));
+      }
+   }
+
+   // .goods__image
+
+   &__image {
+      background-color: #EBEBEB;
+      padding: 0px 0px 70.588% 0px;
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+      img {
+         object-fit: contain;
+         object-position: bottom;
+      }
+   }
+
+   // .goods__title
+
+   &__title {
+      color: #666;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: normal;
+      &:not(:last-child) {
+         margin-bottom: 8px;
+      }
+   }
+
+   // .goods__subtitle
+
+   &__subtitle {
+      color: #B5B5BD;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      &:not(:last-child) {
+         margin-bottom: 8px;
+      }
+   }
+
+   // .goods__text
+
+   &__text {
+      color: #85859B;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 170%;
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+      flex: 0 1 100%;
+   }
+
+   // .goods__link
+
+   &__link {
+      color: #7875FE;
+      font-size: 20px;
+      font-weight: 400;
+      &::after {
+         content: "";
+         background: url("../img/page/goods/Arrow\ 1.svg") no-repeat;
+         width: 20px;
+         height: 14px;
+         display: inline-block;
+         margin-left: 5px;
+         background-size: contain;
+         
+      }
+   }
+}
+
+
 
 
 
