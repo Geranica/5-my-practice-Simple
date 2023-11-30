@@ -34,8 +34,8 @@ body {
    ._container {
       max-width: none;
    }
-}
- */
+} */
+
 .header {
    position: absolute;
    width: 100%;
@@ -527,14 +527,61 @@ body {
 
 
 
+.page {
 
+   // .page__sponsors
 
+   &__sponsors {
+      min-height: 315px;
+      display: flex;
+      align-items: center;
+      background-color: #EBEBEB;
+   }
+}
+.sponsors {
 
+   // .sponsors__container
 
+   &__container {
+      padding-bottom: 60px;
+      padding-top: 60px;
+   }
 
+   // .sponsors__body
 
+   &__body {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+   }
 
+   // .sponsors__item
 
+   &__item {
+      flex: 0 1 calc(100% / 4 - (((4 - 1) / 4) * 30px));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 135px;
+      border: 1px solid #C4C4C4;
+      @media (max-width:854px) {
+         flex: 0 1 calc(100% / 2 - (((2 - 1) / 2) * 30px));
+         min-height: 127px;
+      }
+   }
+
+   // .sponsors__logo
+
+   &__logo {
+      padding: 0px 13px;
+
+      img {
+         max-width: 100%;
+         height: auto;
+         object-fit: cover;
+      }
+   }
+}
 
 
 
