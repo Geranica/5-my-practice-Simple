@@ -585,4 +585,196 @@ body {
 
 
 
+.page {
+
+   // .page__sketch
+
+   &__sketch {
+      min-height: 500px;
+   }
+}
+.sketch {
+
+   // .sketch__container
+
+   &__container {
+      padding-top: 90px;
+   }
+
+   // .sketch__body
+
+   &__body {
+      display: flex;
+      gap: 30px;
+   }
+
+   // .sketch__content
+
+   &__content {
+      font-weight: 400;
+      flex: 0 0 350px;
+      margin-top: 24px;
+   }
+
+   // .sketch__title
+
+   &__title {
+      color: #666;
+      font-size: 40px;
+      line-height: 100%;
+      &:not(:last-child) {
+         margin-bottom: 8px;
+      }
+   }
+
+
+   // .sketch__text
+
+   &__text {
+      color: #85859B;
+      font-family: Roboto;
+      font-size: 18px;
+      line-height: 170%;
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+   }
+
+   // .sketch__button
+
+   &__button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 70px;
+      padding: 5px 90px;
+      border: 1px solid #7875FE;
+      color: #7875FE;
+      color: #7875FE;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: normal;
+   }
+
+   // .sketch__img
+
+   &__img {
+      padding: 0px 0px 40% 0px;
+      flex: 0 1 730px;
+      img {
+         object-fit: cover;
+      }
+   }
+}
+
+
+
+.footer {
+
+   // .footer__first-part
+
+   &__first-part {
+      background-color: #4C5866;
+   }
+
+   // .footer__container
+
+   &__container {
+   }
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0px;
+      min-height: 80px;
+   }
+   .footer {
+
+		// .footer__logo
+
+		&__logo {
+		}
+}
+.logo {
+
+		// .logo_white
+
+		&_white {
+		}
+
+		// .logo__part-one
+
+		&__part-one {
+
+			// .logo__part-one_white
+
+			&_white {
+            border-color: white;
+			}
+		}
+
+		// .logo__part-two
+
+		&__part-two {
+
+			// .logo__part-two_white
+
+			&_white {
+            color: white;
+			}
+		}
+
+		// .logo__part-three
+
+		&__part-three {
+
+			// .logo__part-three_white
+
+			&_white {
+            border-color: white;
+			}
+		}
+
+		// .logo__part-four
+
+		&__part-four {
+
+			// .logo__part-four_white
+
+			&_white {
+            border-color: white;
+			}
+		}
+}
+
+
+   // .footer__social
+
+   &__social {
+      display: flex;
+      gap: 30px
+      ;
+   }
+
+   // .footer__link
+
+   &__link {
+   }
+
+   // .footer__second-part
+
+   &__second-part {
+   }
+
+   &__end {
+      color: #4C5866;
+      font-size: 13px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 3px 0px;
+   }
+}
+
 

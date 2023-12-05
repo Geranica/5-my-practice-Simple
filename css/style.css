@@ -641,3 +641,114 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.page__sketch {
+  min-height: 500px;
+}
+
+.sketch__container {
+  padding-top: 90px;
+}
+.sketch__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.sketch__content {
+  font-weight: 400;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 350px;
+          flex: 0 0 350px;
+  margin-top: 24px;
+}
+.sketch__title {
+  color: #666;
+  font-size: 40px;
+  line-height: 100%;
+}
+.sketch__title:not(:last-child) {
+  margin-bottom: 8px;
+}
+.sketch__text {
+  color: #85859B;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 170%;
+}
+.sketch__text:not(:last-child) {
+  margin-bottom: 30px;
+}
+.sketch__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 70px;
+  padding: 5px 90px;
+  border: 1px solid #7875FE;
+  color: #7875FE;
+  color: #7875FE;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+.sketch__img {
+  padding: 0px 0px 40% 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 730px;
+          flex: 0 1 730px;
+}
+.sketch__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer__first-part {
+  background-color: #4C5866;
+}
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0px;
+  min-height: 80px;
+}
+.footer .logo__part-one_white {
+  border-color: white;
+}
+.footer .logo__part-two_white {
+  color: white;
+}
+.footer .logo__part-three_white {
+  border-color: white;
+}
+.footer .logo__part-four_white {
+  border-color: white;
+}
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.footer__end {
+  color: #4C5866;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 3px 0px;
+}
